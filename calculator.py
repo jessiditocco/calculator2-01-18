@@ -9,24 +9,24 @@ from arithmetic import *
 
 while True:
     token = raw_input("> ")
-    token = token.split(" ")
+    token = token.split()
+    operator = token[0]
 
-    if token[0] == "q":
+    if operator == "q":
         break
-    elif token[0] == "+":
+    elif operator == "+":
         print add(float(token[1]), float(token[2]))
-    elif token[0] == "-":
+    elif operator == "-":
         print subtract(float(token[1]), float(token[2]))
-    elif token[0] == "*":
+    elif operator == "*":
         print multiply(float(token[1]), float(token[2]))
-    elif token[0] == "/":
+    elif operator == "/":
         print divide(float(token[1]), float(token[2]))
-    elif token[0] == "square":
+    elif operator == "square":
         print square(float(token[1]))
-    elif token[0] == "cube":
+    elif operator == "cube":
         print cube(float(token[1]))
-    elif token[0] == "pow":
+    elif operator == "pow":
         print power(float(token[1]), float(token[2]))
-    elif token[0] == "mod":
+    elif operator == "mod":
         print mod(float(token[1]), float(token[2]))
-        
