@@ -30,8 +30,8 @@ def multiply(num_list):
 
     total = num_list[0]
 
-    for num in range(1, len(num_list)):
-        total *= num_list[num]
+    for num in num_list[1:]:
+        total *= num
 
     return total
 
@@ -42,8 +42,8 @@ def divide(num_list):
 
     total = num_list[0]
 
-    for num in range(1, len(num_list)):
-        total /= num_list[num]
+    for num in num_list[1:]:
+        total /= num
 
     return total
 
@@ -60,37 +60,17 @@ def square(num_list):
 
     return square_list
 
-print square([10, 9, 8])
+# print square([10, 9, 8])
 
 
-# def cube(num1):
-#  """Loops through a list of numbers and sums them."""
+def cube(num_list):
+    """Loops through a list of numbers and returns a new list with the cubes."""
 
-#     total = 0
+    cube_list = []
 
-#     for num in num_list:
-#         total += num
+    for num in num_list:
+        cube_list.append(num ** 3)
 
-#     return total
+    return cube_list
 
-
-
-# def power(num1, num2):
-#     """Loops through a list of numbers and sums them."""
-
-#     total = 0
-
-#     for num in num_list:
-#         total += num
-
-#     return total
-
-# def mod(num1, num2):
-#     """Loops through a list of numbers and sums them."""
-
-#     total = 0
-
-#     for num in num_list:
-#         total += num
-
-#     return total
+# print cube([2, 3, 4])
